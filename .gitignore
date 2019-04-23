@@ -12,7 +12,5 @@
 *.out
 
 .idea/
+cmake-build-debug/
 libtorch/
-*_wrap.cxx
-mytest/mytest.go
-gotorch
