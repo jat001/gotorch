@@ -4,9 +4,9 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-    typedef torch::Tensor torch_Tensor;
+    typedef torch::Tensor _Tensor;
 #else
-    typedef void* torch_Tensor;
+    typedef void* _Tensor;
 #endif
 
 #ifdef __cplusplus

@@ -8,17 +8,17 @@ extern "C" {
 #include "tensor.h"
 
 #ifdef __cplusplus
-    typedef torch::nn::Module torch_Module;
-    typedef torch::nn::Linear torch_Linear;
+    typedef torch::nn::Module _Module;
+    typedef torch::nn::Linear _Linear;
 #else
-    typedef void* torch_Module;
-    typedef void* torch_Linear;
+    typedef void* _Module;
+    typedef void* _Linear;
 #endif
 
 typedef struct Linear {
-    torch_Linear liner;
-    torch_Tensor weight;
-    torch_Tensor bias;
+    _Linear liner;
+    _Tensor weight;
+    _Tensor bias;
 } Linear;
 
 Linear new_linear(int64_t in_features, int64_t out_features);
