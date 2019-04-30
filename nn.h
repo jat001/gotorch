@@ -16,7 +16,7 @@ extern "C" {
 #endif
 
 typedef struct Linear {
-    _Linear liner;
+    _Linear p;
     _Tensor weight;
     _Tensor bias;
 } Linear;
