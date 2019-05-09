@@ -17,8 +17,8 @@ extern "C" {
 
 typedef struct Linear {
     _Linear p;
-    _Tensor weight;
-    _Tensor bias;
+    Tensor weight;
+    Tensor bias;
 } Linear;
 
 Linear new_linear(int64_t in_features, int64_t out_features);

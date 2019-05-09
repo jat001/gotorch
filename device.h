@@ -17,6 +17,7 @@ typedef struct Device {
     int16_t device_index;
 } Device;
 
+Device convert_device(_Device device);
 Device new_device(const char* device_string);
 
 #ifdef __cplusplus

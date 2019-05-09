@@ -7,8 +7,8 @@ import "C"
 
 type Linear struct {
 	p      C._Linear
-	weight C._Tensor
-	bias   C._Tensor
+	weight C.Tensor
+	bias   C.Tensor
 }
 
 func NewLinear(inFeatures int64, outFeatures int64) (l *Linear) {
