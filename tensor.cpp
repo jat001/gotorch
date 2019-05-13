@@ -8,7 +8,13 @@ Tensor convert_tensor(_Tensor tensor) {
     };
 }
 
-Tensor new_tensor(double* data, uint64_t sizes) {
-    _Tensor tensor = torch::from_blob(data, sizes);
+Tensor new_tensor(double data[], long sizes[], int lsizes) {
+    std::vector<long> vsizes(sizes, sizes + lsizes);
+    _Tensor tensor = torch::from_blob(data, vsizes, torch::kFloat64);
     return convert_tensor(tensor);
+}
+
+// TODO
+void tensor2array(_Tensor *tensor) {
+    std::cout << *tensor << std::endl;
 }

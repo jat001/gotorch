@@ -22,7 +22,8 @@ typedef struct Tensor {
 } Tensor;
 
 Tensor convert_tensor(_Tensor tensor);
-Tensor new_tensor(double* data, uint64_t sizes);
+Tensor new_tensor(double data[], long sizes[], int lsizes);
+void tensor2array(_Tensor *tensor);
 
 #ifdef __cplusplus
 }
