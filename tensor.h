@@ -1,5 +1,4 @@
 #include <stdbool.h>
-#include <stdint.h>
 
 #ifdef __cplusplus
 #include <torch/extension.h>
@@ -21,9 +20,15 @@ typedef struct Tensor {
     bool is_cuda;
 } Tensor;
 
+typedef struct Array {
+    double *data;
+    unsigned long *sizes;
+    unsigned long sizes_length;
+} Array;
+
 Tensor convert_tensor(_Tensor tensor);
-Tensor new_tensor(double data[], long sizes[], int lsizes);
-void tensor2array(_Tensor *tensor);
+Tensor new_tensor(double data[], unsigned long sizes[], unsigned long sizes_length);
+Array tensor2array(_Tensor *tensor);
 
 #ifdef __cplusplus
 }
