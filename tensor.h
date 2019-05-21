@@ -9,9 +9,9 @@ extern "C" {
 #include "tensor_options.h"
 
 #ifdef __cplusplus
-    typedef torch::Tensor _Tensor;
+typedef torch::Tensor _Tensor;
 #else
-    typedef void* _Tensor;
+typedef void* _Tensor;
 #endif
 
 typedef struct Tensor {
@@ -21,14 +21,14 @@ typedef struct Tensor {
 } Tensor;
 
 typedef struct Array {
-    double *data;
-    unsigned long *sizes;
+    double* data;
+    unsigned long* sizes;
     unsigned long sizes_length;
 } Array;
 
 Tensor convert_tensor(_Tensor tensor);
 Tensor new_tensor(double data[], unsigned long sizes[], unsigned long sizes_length);
-Array tensor2array(_Tensor *tensor);
+Array tensor2array(_Tensor* tensor);
 
 #ifdef __cplusplus
 }

@@ -6,9 +6,9 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-    typedef torch::Device _Device;
+typedef torch::Device _Device;
 #else
-    typedef void* _Device;
+typedef void* _Device;
 #endif
 
 typedef struct Device {

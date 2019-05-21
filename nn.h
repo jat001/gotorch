@@ -8,11 +8,11 @@ extern "C" {
 #include "tensor.h"
 
 #ifdef __cplusplus
-    typedef torch::nn::Module _Module;
-    typedef torch::nn::Linear _Linear;
+typedef torch::nn::Module _Module;
+typedef torch::nn::Linear _Linear;
 #else
-    typedef void* _Module;
-    typedef void* _Linear;
+typedef void* _Module;
+typedef void* _Linear;
 #endif
 
 typedef struct Linear {

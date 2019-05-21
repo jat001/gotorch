@@ -14,11 +14,11 @@ Tensor new_tensor(double data[], unsigned long sizes[], unsigned long sizes_leng
     return convert_tensor(tensor);
 }
 
-Array tensor2array(_Tensor *tensor) {
-    double *data = tensor->view(-1).data<double>();
+Array tensor2array(_Tensor* tensor) {
+    double* data = tensor->view(-1).data<double>();
     std::vector<long> vsizes(tensor->sizes().vec());
 
-    unsigned long *sizes = new unsigned long[vsizes.size()];
+    unsigned long* sizes = new unsigned long[vsizes.size()];
     std::copy(vsizes.data(), vsizes.data() + vsizes.size(), sizes);
 
     return {data, sizes, vsizes.size()};
